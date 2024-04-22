@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import TextBox from "../components/TextBox.astro";
+
+import profileImage from "../assets/PortafolioProfile.jpg";
+---
+
+<Layout title="My Portafolio">
+  <main
+    class="text-neutral-800 p-2 md:p-4 m-auto w-full lg:w-8/12 text-lg text-center"
+  >
+    <h1 class="text-6xl font-mono">
+      Claudio <span class="text-gradient">Araujo</span>
+    </h1>
+    <ul
+      role="list"
+      class="flex flex-col items-center gap-8 w-3/4 lg:w-1/2 mt-8 m-auto"
+    >
+      <Card
+        title="The hero"
+        body="Hi, I'm a Backend Developer with the goal of becoming a Senior FullStack Developer who brings to you great work experience. In my free time I'm creating videogames using PICO-8 and Godot with a propuse to tell storys that can help someone's hearth."
+      >
+        <Image
+          slot="header"
+          src={profileImage}
+          width="232"
+          height="232"
+          class="m-4 rounded-full"
+          alt="Profile Image."
+        />
+      </Card>
+      <TextBox title="Skills" body="I have some superpowers" />
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-neutral-500 to-neutral-300;
+  }
+</style>
