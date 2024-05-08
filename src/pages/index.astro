@@ -5,6 +5,8 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import TextBox from "../components/TextBox.astro";
 
+import Render from "../components/Render";
+
 import profileImage from "../assets/PortafolioProfile.jpg";
 ---
 
@@ -15,6 +17,7 @@ import profileImage from "../assets/PortafolioProfile.jpg";
     <h1 class="text-6xl font-mono">
       Claudio <span class="text-gradient">Araujo</span>
     </h1>
+    <Render client:load />
     <ul
       role="list"
       class="flex flex-col items-center gap-8 w-3/4 lg:w-1/2 mt-8 m-auto"
@@ -29,10 +32,12 @@ import profileImage from "../assets/PortafolioProfile.jpg";
           width="232"
           height="232"
           class="m-4 rounded-full"
-          alt="Profile Image."
+          alt="Profile"
         />
       </Card>
-      <TextBox title="Skills" body="I have some superpowers" />
+      <TextBox title="Skills" body="There is some of my basic superpowers">
+        <div class="grid grid-cols-2" slot="footer"></div>
+      </TextBox>
     </ul>
   </main>
 </Layout>
