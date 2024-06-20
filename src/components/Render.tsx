@@ -1,22 +1,26 @@
 import { Canvas, useThree } from '@react-three/fiber'
 import * as THREE from "three"
-import { OrbitControls } from '@react-three/drei'
+import { AsciiRenderer, Effects, OrbitControls } from '@react-three/drei'
 import { Model } from './Model'
+import { Pixelation } from '@react-three/postprocessing'
 
 
 const Render = () => {
 
     return (
         <div className='flex justify-center'>
-            <div className='h-120 w-120'>
-                <Canvas camera={{ position: [-8, 6, 0] }}>
+            <div className='w-280 aspect-square bg-sky-500'>
+                <Canvas camera={{ position: [-8, 4, 0] }}>
+                    <Pixelation granularity={8} />
                     <Model position={[0, 0, 0]} scale={4} />
                     <ambientLight intensity={Math.PI / 2} />
                     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
                     <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
                     <OrbitControls />
-                    <axesHelper args={[16]} />
                     <gridHelper />
+                    <axesHelper args={
+                        [5]
+                    }/>
                 </Canvas>
             </div>
         </div >
