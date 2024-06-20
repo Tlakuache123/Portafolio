@@ -1,5 +1,4 @@
-import { Canvas, useThree } from '@react-three/fiber'
-import * as THREE from "three"
+import { Canvas } from '@react-three/fiber'
 import { AsciiRenderer, Effects, OrbitControls } from '@react-three/drei'
 import { Model } from './Model'
 import { Pixelation } from '@react-three/postprocessing'
