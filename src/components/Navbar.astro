@@ -1,0 +1,19 @@
+---
+import DarkModeButton from "./DarkModeButton";
+---
+
+<nav
+  class="bg-neutral-700/30 backdrop-blur-sm overflow-hidden sticky top-0 w-full z-50 rounded-b py-2 px-2 flex justify-between"
+>
+  <div class="flex gap-4">
+    <p>Claudio Araujo</p>
+    <ul class="md:flex gap-1">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">Work</a></li>
+    </ul>
+  </div>
+  <div>
+    <DarkModeButton client:load />
+  </div>
+</nav>

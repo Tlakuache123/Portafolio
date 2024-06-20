@@ -8,7 +8,7 @@ const { title, body } = Astro.props;
 ---
 
 <div
-  class="bg-neutral-100 shadow-sm rounded-xl px-2 py-4 md:px-4 min-h-60 w-full"
+  class="bg-neutral-100 dark:bg-neutral-900 shadow-sm rounded-xl px-2 py-4 md:px-4 min-h-60 w-full"
 >
   <div class="flex items-center justify-center">
     <!--Header -->
@@ -19,7 +19,7 @@ const { title, body } = Astro.props;
     <h2 class="text-2xl text-start font-mono">
       {title}
     </h2>
-    <p class="text-left overflow-auto text-neutral-500 font-sans">
+    <p class="text-left overflow-auto text-neutral-500 font-sans mt-2">
       {body}
     </p>
   </div>
