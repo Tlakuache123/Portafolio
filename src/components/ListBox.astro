@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  body?: string;
+  items: string[];
+}
+
+const { title, items, body } = Astro.props;
+---
+
+<div class="bg-deepgreen-300 rounded p-2 shadow-md">
+  <p class="text-deepgreen-200 text-xl">
+    {title}
+  </p>
+  <hr class="bg-deepgreen-100 border-0 h-px mb-4" />
+  <ul
+    class="text-deepgreen-100 text-left list-disc list-inside pl-4 space-y-1 mb-1"
+  >
+    {items.map((item) => <li>{item}</li>)}
+  </ul>
+</div>

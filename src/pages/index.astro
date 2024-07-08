@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import TextBox from "../components/TextBox.astro";
 import Navbar from "../components/Navbar.astro";
+import ListBox from "../components/ListBox.astro";
 
 import Render from "../components/Render";
 
@@ -14,8 +15,10 @@ import profileImage from "../assets/PortafolioProfile.jpg";
 <Layout title="My Portafolio">
   <Navbar />
   <main class="p-1 text-center flex flex-col justify-center">
-    <h1 class="text-6xl font-mono">
-      Claudio <span class="text-cyan-600">Araujo</span>
+    <h1 class="text-6xl font-mono bg-transparent z-10">
+      Claudio <span class="text-deepgreen-300 dark:text-deepgreen-200"
+        >Araujo</span
+      >
     </h1>
 
     <div class="mt-2">
@@ -24,10 +27,10 @@ import profileImage from "../assets/PortafolioProfile.jpg";
 
     <div class="flex justify-center">
       <div
-        class="shadow-md rounded-lg w-fit bg-neutral-500 text-neutral-200 px-4 md:px-8 py-2 opacity-85"
+        class="shadow-md rounded-lg w-fit bg-deepgreen-300 text-deepgreen-100 px-4 md:px-8 py-2 opacity-85"
       >
         <p class="font-mono text-sm">
-          Hi, I'm Claudio, a Backend Developer who wants to be a hero.
+          Hi, I'm Claudio, a Junior Developer who wants to be a Hero
         </p>
       </div>
     </div>
@@ -38,7 +41,7 @@ import profileImage from "../assets/PortafolioProfile.jpg";
     >
       <Card
         title="The hero"
-        body="Hi, I'm a Backend Developer with the goal of becoming a Senior FullStack Developer who brings to you great work experience. In my free time I create games using PICO-8 and Godot with a propuse to tell storys that can help someone's hearth."
+        body="Hi, I'm a Backend Developer with the goal of becoming a Senior FullStack Developer who brings a great work experience and spread his knwoledge around the world. In my free time I create games using PICO-8 and Godot with a propuse to tell storys that can help someone's hearth."
       >
         <Image
           slot="header"
@@ -49,9 +52,43 @@ import profileImage from "../assets/PortafolioProfile.jpg";
           alt="Profile"
         />
       </Card>
-      <TextBox title="Skills" body="There is some of my basic superpowers">
-        <div class="grid grid-cols-2" slot="footer"></div>
+      <TextBox
+        title="Skills"
+        body="This are some of my 'spells' I have learn since I chose the path of programming"
+      >
+        <div class="grid grid-cols-3 gap-2">
+          <ListBox
+            title="Backend"
+            items={[
+              "Node",
+              "Typescript",
+              "Express",
+              "Python",
+              "Django",
+              "MongoDB",
+              "Postgresql",
+              "MySql",
+            ]}
+          />
+          <ListBox
+            title="Frontend"
+            items={[
+              "HTML",
+              "CSS",
+              "JS",
+              "React",
+              "Tailwindcss",
+              "Axios",
+              "Astro",
+            ]}
+          />
+          <ListBox
+            title="Others"
+            items={["Godot", "Git", "Linux", "Vim", "Lua", "C++"]}
+          />
+        </div>
       </TextBox>
+      <TextBox title="Works" body="A summary of my 'epic quests'" />
     </ul>
   </main>
 </Layout>
