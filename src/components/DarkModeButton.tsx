@@ -12,7 +12,7 @@ const DarkModeButton = () => {
   return (
     <button
       onClick={handleDarkMode}
-      className="text-neutral-800 dark:text-neutral-200 bg-neutral-300 dark:bg-neutral-600 p-2 rounded"
+      className="transition-all duration-200 bg-everlightbg-500 hover:bg-everlightbg-600 dark:bg-everdarkbg-500 dark:hover:bg-everdarkbg-600 p-2 rounded hover:scale-105"
     >
       {darkMode ? (
         <FaSun className="w-6 h-6" />

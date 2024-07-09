@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box-colors {
+  @apply bg-everlightbg-400 hover:bg-everlightbg-300 dark:bg-everdarkbg-300 dark:hover:bg-everdarkbg-400;
+}
+
+a {
+  @apply transition-colors font-light hover:text-everlightgreen-200 dark:hover:text-everdarkgreen-100;
+}

@@ -7,17 +7,21 @@ interface Props {
 const { title, body } = Astro.props;
 ---
 
-<div class="bg-deepgreen-300 rounded-xl p-4 min-h-60 w-full mb-4 shadow-md">
+<div
+  class="box-colors transition group rounded-xl p-4 min-h-60 w-full mb-4 hover:shadow hover:-translate-y-1 hover:scale-105"
+>
   <div class="flex items-center justify-center">
     <!--Header -->
     <slot name="header" />
   </div>
 
   <div class="flex flex-col">
-    <h2 class="text-2xl text-start font-mono text-deepgreen-200">
+    <h2
+      class="text-2xl text-start group-hover:text-everlightorange-200 dark:group-hover:text-everdarkorange-100"
+    >
       {title}
     </h2>
-    <p class="text-left overflow-auto text-deepgreen-100 font-sans mt-2">
+    <p class="text-left overflow-auto mt-2">
       {body}
     </p>
   </div>
