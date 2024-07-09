@@ -6,6 +6,10 @@
   @apply bg-everlightbg-400 hover:bg-everlightbg-300 dark:bg-everdarkbg-300 dark:hover:bg-everdarkbg-400;
 }
 
+.button-colors {
+  @apply bg-everlightbg-500 hover:bg-everlightbg-600 dark:bg-everdarkbg-500 dark:hover:bg-everdarkbg-600 active:bg-everdarkbg-600 dark:active:bg-everlightbg-400 p-2 rounded;
+}
+
 a {
   @apply transition-colors font-light hover:text-everlightgreen-200 dark:hover:text-everdarkgreen-100;
 }

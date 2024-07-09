@@ -78,23 +78,37 @@ const skills = [
           />
         </Card>
       </section>
-      <TextBox
-        title="Skills"
-        body="This are some of my 'spells' I have learn since I chose the path of programming"
-      >
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-2">
-          {
-            skills.map((skill, index) => (
-              <ListBox
-                title={skill.title}
-                items={skill.items}
-                class_list={`${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
-              />
-            ))
-          }
-        </div>
+      <section id="skills" class="w-full">
+        <TextBox
+          title="Skills"
+          body="This are some of my 'spells' I have learn since I chose the path of programming"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-2"
+          >
+            {
+              skills.map((skill, index) => (
+                <ListBox
+                  title={skill.title}
+                  items={skill.items}
+                  class_list={`${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
+                />
+              ))
+            }
+          </div>
+        </TextBox>
+      </section>
+      <TextBox title="Works" body="A summary of my 'epic quests'">
+        <section>
+          <h2 class="text-xl">DragonTec</h2>
+          <h4 class="text-sm font-light">8 months (Oct 2023 - Oct 2024)</h4>
+        </section>
+
+        <section>
+          <h2 class="text-xl">DSI Fes Acatlan, UNAM</h2>
+          <h4 class="text-sm font-light">6 months (Agu 2023 - Mar 2024)</h4>
+        </section>
       </TextBox>
-      <TextBox title="Works" body="A summary of my 'epic quests'" />
     </ul>
   </main>
 </Layout>

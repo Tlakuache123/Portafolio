@@ -21,6 +21,11 @@ const { title, body } = Astro.props;
     >
       {title}
     </h2>
+    <div class="flex justify-center items-center">
+      <hr
+        class="transition-all duration-200 bg-everlightfg/30 dark:bg-everdarkfg/30 border-0 h-px w-0 group-hover:w-full"
+      />
+    </div>
     <p class="text-left overflow-auto mt-2">
       {body}
     </p>
