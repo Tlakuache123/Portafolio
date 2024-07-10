@@ -8,7 +8,9 @@ interface Props {
 const { title, items, class_list } = Astro.props;
 ---
 
-<div class={`group box-colors rounded p-2 hover:shadow ${class_list}`}>
+<div
+  class={`transition-all group box-colors rounded p-2 hover:shadow ${class_list}`}
+>
   <p
     class="text-xl group-hover:text-everlightblue-200 dark:group-hover:text-everdarkblue-100"
   >

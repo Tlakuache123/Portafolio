@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.page-colors {
+  @apply bg-everlightbg-600 dark:bg-everdarkbg-100 text-everlightfg dark:text-everdarkfg
+}
+
 .box-colors {
-  @apply bg-everlightbg-400 hover:bg-everlightbg-300 dark:bg-everdarkbg-300 dark:hover:bg-everdarkbg-400;
+  @apply bg-everlightbg-400 hover:bg-everlightbg-300 dark:bg-everdarkbg-200 dark:hover:bg-everdarkbg-300;
 }
 
 .button-colors {
   @apply bg-everlightbg-500 hover:bg-everlightbg-600 dark:bg-everdarkbg-500 dark:hover:bg-everdarkbg-600 active:bg-everdarkbg-600 dark:active:bg-everlightbg-400 p-2 rounded;
+}
+
+.navbar-colors {
+  @apply bg-everlightbg-200/70 dark:bg-everdarkbg-600/30
 }
 
 a {
