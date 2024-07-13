@@ -35,7 +35,7 @@ const Render = () => {
     <div className="flex justify-center">
       <div className="w-1/2 lg:w-1/4 mt-[-20px] aspect-square">
         <Canvas camera={{ position: [0.2, 0, -1.9] }} shadows>
-          <ambientLight intensity={1.5} color={0xFDF6E3} />
+          <ambientLight intensity={2} color={0xFDF6E3} />
           <Scene />
         </Canvas>
       </div>

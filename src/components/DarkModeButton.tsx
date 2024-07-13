@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const DarkModeButton = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const handleDarkMode = () => {
     document.documentElement.classList.toggle("dark");

@@ -6,6 +6,7 @@ import Card from "../components/Card.astro";
 import TextBox from "../components/TextBox.astro";
 import Navbar from "../components/Navbar.astro";
 import ListBox from "../components/ListBox.astro";
+import IconLink from "../components/IconLink.astro";
 
 import Render from "../components/Render";
 
@@ -38,7 +39,7 @@ const skills = [
 
 <Layout title="My Portafolio">
   <Navbar />
-  <main class="p-1 text-center flex flex-col justify-center">
+  <main class="px-1 py-4 text-center flex flex-col justify-center">
     <h1 class="text-6xl font-mono bg-transparent z-10">
       Claudio <span class="text-everlightblue-200 dark:text-everdarkblue-100"
         >Araujo</span
@@ -55,11 +56,9 @@ const skills = [
     >
       <section id="about">
         <div class="flex justify-center mb-6">
-          <div
-            class="box-colors transition rounded-lg w-fit px-4 md:px-8 py-2 opacity-85 hover:-translate-y-1 hover:scale-105 hover:shadow mx-10 md:mx-0"
-          >
+          <div class="box-colors transition rounded w-fit px-4 md:px-8 py-2">
             <p class="font-mono text-sm">
-              Hi, I'm Claudio, a Junior Developer who wants to be a Hero
+              Junior Developer who wants to be your hero
             </p>
           </div>
         </div>
@@ -78,7 +77,7 @@ const skills = [
           />
         </Card>
       </section>
-      <section id="skills" class="w-full">
+      <section id="skills">
         <TextBox
           title="Skills"
           body="This are some of my 'spells' I have learn since I chose the path of programming"
@@ -98,19 +97,29 @@ const skills = [
           </div>
         </TextBox>
       </section>
-      <TextBox title="Works" body="A summary of my 'epic quests'">
-        <section>
-          <h2 class="text-xl">DragonTec</h2>
-          <h4 class="text-sm font-light">8 months (Oct 2023 - Oct 2024)</h4>
-        </section>
-
-        <section>
-          <h2 class="text-xl">DSI Fes Acatlan, UNAM</h2>
-          <h4 class="text-sm font-light">6 months (Agu 2023 - Mar 2024)</h4>
-        </section>
-      </TextBox>
+      <section id="works">
+        <TextBox title="Works" body="A summary of my 'epic quests'" />
+      </section>
     </ul>
   </main>
+  <section class="bg-everlightbg-300 dark:bg-everdarkbg-200 p-4">
+    <h1 class="text-2xl mb-2">Contact</h1>
+    <hr
+      class="bg-everlightfg/30 dark:bg-everdarkfg/30 border-0 h-px w-full mb-4"
+    />
+    <div class="flex px-2 gap-6">
+      <IconLink
+        title={"Github"}
+        iconName={"github"}
+        link={"https://github.com/Tlakuache123"}
+      />
+      <IconLink
+        title="LinkedIn"
+        iconName="linkedin"
+        link={"https://www.linkedin.com/in/claudio-araujo-b3a439265/"}
+      />
+    </div>
+  </section>
 </Layout>
 
 <style>
