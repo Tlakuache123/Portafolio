@@ -50,9 +50,8 @@ const skills = [
       <Render client:load />
     </div>
 
-    <ul
-      role="list"
-      class="flex flex-col items-center gap-8 w-3/4 lg:w-1/2 mt-8 m-auto"
+    <div
+      class="flex flex-col items-center justify-center gap-8 px-4 md:px-32 lg:px-64 mt-8 w-full"
     >
       <section id="about">
         <div class="flex justify-center mb-6">
@@ -100,14 +99,14 @@ const skills = [
       <section id="works">
         <TextBox title="Works" body="A summary of my 'epic quests'" />
       </section>
-    </ul>
+    </div>
   </main>
   <section class="bg-everlightbg-300 dark:bg-everdarkbg-200 p-4">
     <h1 class="text-2xl mb-2">Contact</h1>
     <hr
       class="bg-everlightfg/30 dark:bg-everdarkfg/30 border-0 h-px w-full mb-4"
     />
-    <div class="flex px-2 gap-6">
+    <div class="flex flex-col md:flex-row px-2 gap-3 md:gap-6">
       <IconLink
         title={"Github"}
         iconName={"github"}
