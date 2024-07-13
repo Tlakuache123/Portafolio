@@ -3,7 +3,7 @@ import React from "react";
 import type { Mesh } from "three";
 
 const Model = React.forwardRef((props: any, ref) => {
-  const { scene } = useGLTF("/src/assets/PortafolioAvatar.gltf");
+  const { scene } = useGLTF("/assets/PortafolioAvatar.gltf");
 
   scene.traverse((object) => {
     if ((object as Mesh).isMesh) {
