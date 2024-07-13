@@ -1,10 +1,11 @@
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Model from "./Model";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef } from "react";
+import type { Object3D } from "three";
 
 const Scene = () => {
-  const modelRef = useRef();
+  const modelRef = useRef<Object3D>();
   const { camera } = useThree();
 
   useEffect(() => {

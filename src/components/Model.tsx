@@ -1,11 +1,12 @@
 import { useGLTF } from "@react-three/drei";
 import React from "react";
+import type { Mesh } from "three";
 
 const Model = React.forwardRef((props: any, ref) => {
   const { scene } = useGLTF("/src/assets/PortafolioAvatar.gltf");
 
   scene.traverse((object) => {
-    if (object.isMesh) {
+    if ((object as Mesh).isMesh) {
       object.castShadow = true;
       object.receiveShadow = true;
     }
